@@ -1,0 +1,69 @@
+\begin{thebibliography}{}
+
+\bibitem[Arduino, 2017]{ArduinoIot}
+Arduino (2017).
+\newblock Arduino iot.
+\newblock 8 abr. de 2017.
+
+\bibitem[Dweet, 2017]{DweetIot}
+Dweet (2017).
+\newblock Share your thing - like it ain't no thang.
+\newblock 8 abr. de 2017.
+
+\bibitem[FreeBoard, 2017]{FreeBoardIot}
+FreeBoard (2017).
+\newblock Visualize the internet of things.
+\newblock 8 abr. de 2017.
+
+\bibitem[HighCharts, 2017]{HighChartsIot}
+HighCharts (2017).
+\newblock Make your data come alive.
+\newblock 8 abr. de 2017.
+
+\bibitem[IEEE, 2016]{P2413}
+IEEE (2016).
+\newblock Standard for an architectural framework for the internet of things
+  (iot).
+\newblock 8 abr. de 2017.
+
+\bibitem[Instructables, 2017]{InstructablesIot}
+Instructables (2017).
+\newblock Let's make.
+\newblock 8 abr. de 2017.
+
+\bibitem[Intel, 2017]{IntelIot}
+Intel (2017).
+\newblock Internet das coisas.
+\newblock 8 abr. de 2017.
+
+\bibitem[Microsoft, 2017]{WindowsIot}
+Microsoft (2017).
+\newblock Windows 10 iot core.
+\newblock 8 abr. de 2017.
+
+\bibitem[Raspberry, 2017]{RaspberryGoogleIot}
+Raspberry (2017).
+\newblock Help google develop tools for raspberry pi.
+\newblock 8 abr. de 2017.
+
+\bibitem[Tanenbaum and Wetherall, 2011]{tanenbaum2011computer}
+Tanenbaum, A.~S. and Wetherall, D.~J. (2011).
+\newblock {\em Computer networks}.
+\newblock Pearson.
+
+\bibitem[ThingSpeak, 2017]{ThingSpeakIot}
+ThingSpeak (2017).
+\newblock Understand your things.
+\newblock 8 abr. de 2017.
+
+\bibitem[Valente, 2016]{PedroValente}
+Valente, P. (2016).
+\newblock O que é e como funciona a internet das coisas.
+\newblock 8 abr. de 2017.
+
+\bibitem[World, 2015]{ComputerWorld}
+World, C. (2015).
+\newblock Iot: As brechas de segurança na comunicação máquina a máquina.
+\newblock 8 abr. de 2017.
+
+\end{thebibliography}

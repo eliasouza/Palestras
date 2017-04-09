@@ -1,2 +1,2 @@
 # Palestras
-Contém Palestras realizadas por mim.
+Repositórios com os códigos das palestras que ministrei.

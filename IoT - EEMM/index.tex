@@ -1,0 +1,53 @@
+%-------------------------------------------------
+%% Classe utilizada:
+%-------------------------------------------------
+
+\documentclass{beamer}
+
+%-------------------------------------------------
+%% Pacotes (imports) utilizados:
+%-------------------------------------------------
+
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{colortbl}
+\usepackage{verbatim} % Para comentar múltiplas linhas
+\usepackage{ragged2e}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{epstopdf}
+\usepackage[3D]{movie15} % Para reproduzir vídeo
+\usepackage{subfig}%[caption=false,font=normalsize,labelfont=sf,textfont=sf] % Subfigure package
+\usepackage[portuguese,ruled,lined,linesnumbered]{algorithm2e} % Pseudocódigo
+\SetKwComment{Comment}{//}{} % Permite comentários no pseudocódigo
+\DontPrintSemicolon % Remove ';' do pseudocódigo
+\SetCommentSty{itshape} % Formato do comentário
+
+%-------------------------------------------------
+%% Configurações (Modificar conforme o uso):
+%-------------------------------------------------
+
+\include{capa} % Capa da apresentação
+\input{configuracoes} % Outras configurações
+\linespread{1}
+
+%-------------------------------------------------
+%% Desenvolvimento da Apresentação:
+%-------------------------------------------------
+
+\begin{document}
+	% Elementos pré textuais
+	\frame{\titlepage}
+	\frame{\frametitle{Sumário} \tableofcontents}
+	
+	% Conteúdo
+	\include{introducao}
+	\include{desenvolvimento}
+	%\include{recapitulacao}
+	
+	% Elementos pós textuais
+	\include{referencias}
+	\include{agradecimento}
+\end{document}

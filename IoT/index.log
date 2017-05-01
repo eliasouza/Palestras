@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.31)  9 APR 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.31)  10 APR 2017 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1848,9 +1848,9 @@ ecss0500.600pk> </home/elias/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.60
 mf-var/fonts/pk/ljfour/jknappen/ec/ecsi1440.600pk> </home/elias/.texmf-var/font
 s/pk/ljfour/jknappen/ec/ecss1440.600pk> </home/elias/.texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecsx1440.600pk>
-Output written on index.pdf (25 pages, 3733910 bytes).
+Output written on index.pdf (25 pages, 3734188 bytes).
 PDF statistics:
- 800 PDF objects out of 1000 (max. 8388607)
+ 801 PDF objects out of 1000 (max. 8388607)
  343 compressed objects within 4 object streams
  92 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)

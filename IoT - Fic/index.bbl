@@ -1,8 +1,18 @@
 \begin{thebibliography}{}
 
+\bibitem[Amazon, 2017]{Amazon}
+Amazon (2017).
+\newblock Internet das coisas.
+\newblock 1 maio de 2017.
+
 \bibitem[Arduino, 2017]{ArduinoIot}
 Arduino (2017).
 \newblock Arduino iot.
+\newblock 8 abr. de 2017.
+
+\bibitem[ComputerWorld, 2015]{ComputerWorld}
+ComputerWorld (2015).
+\newblock Iot: As brechas de segurança na comunicação máquina a máquina.
 \newblock 8 abr. de 2017.
 
 \bibitem[Dweet, 2017]{DweetIot}
@@ -10,10 +20,20 @@ Dweet (2017).
 \newblock Share your thing - like it ain't no thang.
 \newblock 8 abr. de 2017.
 
+\bibitem[Ericsson, 2015]{Ericsson}
+Ericsson (2015).
+\newblock A web social das coisas.
+\newblock 1 maio de 2017.
+
 \bibitem[FreeBoard, 2017]{FreeBoardIot}
 FreeBoard (2017).
 \newblock Visualize the internet of things.
 \newblock 8 abr. de 2017.
+
+\bibitem[Fritzing, 2017]{Fritzing}
+Fritzing (2017).
+\newblock Newest projects.
+\newblock 1 maio de 2017.
 
 \bibitem[Hackaday, 2017]{HackadayIot}
 Hackaday (2017).
@@ -24,6 +44,11 @@ Hackaday (2017).
 HighCharts (2017).
 \newblock Make your data come alive.
 \newblock 8 abr. de 2017.
+
+\bibitem[Idgnow, 2017]{IDGNOW}
+Idgnow (2017).
+\newblock Internet das coisas.
+\newblock 1 maio de 2017.
 
 \bibitem[IEEE, 2016]{P2413}
 IEEE (2016).
@@ -40,6 +65,11 @@ Instructables (2017).
 Intel (2017).
 \newblock Internet das coisas.
 \newblock 8 abr. de 2017.
+
+\bibitem[Michaelis, 2017]{Michaelis}
+Michaelis (2017).
+\newblock Dicionário brasileiro da língua portuguesa.
+\newblock 1 maio de 2017.
 
 \bibitem[Microsoft, 2017]{WindowsIot}
 Microsoft (2017).
@@ -64,11 +94,6 @@ ThingSpeak (2017).
 \bibitem[Valente, 2016]{PedroValente}
 Valente, P. (2016).
 \newblock O que é e como funciona a internet das coisas.
-\newblock 8 abr. de 2017.
-
-\bibitem[World, 2015]{ComputerWorld}
-World, C. (2015).
-\newblock Iot: As brechas de segurança na comunicação máquina a máquina.
 \newblock 8 abr. de 2017.
 
 \end{thebibliography}

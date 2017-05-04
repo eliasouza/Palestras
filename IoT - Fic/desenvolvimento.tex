@@ -1,8 +1,8 @@
 %-------------------------------------------------
-%% Única:
+%% Características:
 %-------------------------------------------------
 \section{Características}
-\label{sec:caracteristicas}
+\ncframesummary
 
 \subsection*{Única}
 \begin{frame}{O que torna uma coisa única?}
@@ -14,9 +14,6 @@
 	\footnotetext{http://www.multipetros.gr/posts/tag/ip/}
 \end{frame}
 
-%-------------------------------------------------
-%% Análise:
-%-------------------------------------------------
 \subsection*{Análise}
 \begin{frame}{Como analisar os dados?}
 	\begin{block}{}
@@ -24,13 +21,9 @@
 	\end{block}
 	
 	\begin{itemize}
-		\item \textit{Big Data} - Processamento de alta peformance;
-		\item Inteligência Artificial: 
-		\begin{itemize}
-			\item Redes Neurais; 
-			\item Algoritmos Genéticos;
-			\item Lógica \textit{Fuzzy}...
-		\end{itemize}
+		\item \textit{Big Data} - Processamento de alta performance;
+		\item \textit{Machine Learning};
+		\item Inteligência Artificial...
 	\end{itemize}
 	
 	\begin{figure}[H]
@@ -40,9 +33,6 @@
 	\footnotetext{http://www.bankers-adda.com/wp-content/uploads/2015/11/}
 \end{frame}
 
-%-------------------------------------------------
-%% Comunicação:
-%-------------------------------------------------
 \subsection*{Comunicação}
 \begin{frame}{Como as coisas se falam?}
 	\begin{block}{Sensores}
@@ -52,12 +42,12 @@
 	\end{block}
 	
 	\begin{columns}
-		\column{0.4\linewidth}
+		\column{0.45\linewidth}
 		\begin{block}{Protocolos}
 			\begin{itemize}
-				\item MQTT:
+				\item MQTT\footnotemark:
 					\begin{itemize}
-						\item \textit{Publish/Subscribe};
+						\item \textit{Publisher/Subscriber};
 						\item M2M;
 						\item TCP/IP.
 					\end{itemize} 
@@ -73,26 +63,19 @@
 		\column{0.5\linewidth}
 		\begin{block}{Conectividade}
 			\begin{itemize}
+				\item Rádio Frequência;
+				\item Wi-Fi;
+				\item \textit{Bluetooth};
 				\item 2G - Mensagens;
 				\item 3G - Áudio e Vídeo;
 				\item 4G - Sem distinção, é tudo dado;
-				\item 5G - Tudo dado, mas com baixa latência e alta velocidade.
+				\item 5G - Tudo dado, baixa latência e alta velocidade.
 			\end{itemize}
 		\end{block}
 	\end{columns}
+	\footnotetext{\textit{Message Queue Telemetry Transport}}
 \end{frame}
 
-\begin{frame}{Arquitetura}
-	\begin{figure}[H]
-		\includegraphics[width=.9\textwidth]{comunicacao.png}\footnotemark
-	\end{figure}
-	
-	\footnotetext{http://images.cnitblog.com/blog/120296/201406/}
-\end{frame}
-
-%-------------------------------------------------
-%% Controle:
-%-------------------------------------------------
 \subsection*{Controle}
 \begin{frame}{Como controlar a aplicação?}
 	\begin{itemize}
@@ -100,18 +83,32 @@
 		\item De qualquer lugar.
 	\end{itemize}
 	
-		\begin{figure}[H]
-			\includegraphics[width=.6\textwidth]{controle.jpg}\footnotemark
-		\end{figure}
+	\begin{columns}
+		\column{0.4\linewidth}
+			\begin{figure}[H]
+				\includegraphics[width=1\textwidth]{mrhouse.png}
+			\end{figure}
 		
-		\footnotetext{https://cdn.psfk.com/wp-content/uploads/2014/05/}
+		\column{0.5\linewidth}
+		\begin{figure}[H]
+			\includegraphics[width=1\textwidth]{rpi.png}
+		\end{figure}
+	\end{columns}
 \end{frame}
 
 %-------------------------------------------------
 %% Estrutura:
 %-------------------------------------------------
 \section{Estrutura}
-\label{sec:estrutura}
+\ncframesummary
+
+\subsection*{Arquitetura}
+\begin{frame}{}
+	\begin{figure}[H]
+		\includegraphics[width=1\textwidth]{arquitetura.png}\footnotemark
+	\end{figure}
+	\footnotetext{https://blog.butecopensource.org/wp-content/uploads/2016/02/}
+\end{frame}
 
 \subsection*{Integração}
 \begin{frame}{Multidisciplinariedade}
@@ -132,9 +129,6 @@
 	\footnotetext{https://hackster.imgix.net/uploads/cover\_image/file/81451/}
 \end{frame}
 
-%-------------------------------------------------
-%% Hardware:
-%-------------------------------------------------
 \subsection*{Hardware}
 \begin{frame}{Raspberry Pi}
 	\begin{figure}[H]
@@ -142,6 +136,20 @@
 	\end{figure}
 	
 	\footnotetext{http://raspi.tv/2016/raspberry-pi-family-photo-updated-to-include-pi3b-29-feb-2016}
+\end{frame}
+
+\begin{frame}{Raspberry Pi 2 Model B}
+	\begin{figure}[H]
+		\includegraphics[width=.7\textwidth]{rpi2.pdf}\footnotemark
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Navio}
+	\begin{figure}[H]
+		\includegraphics[width=.6\textwidth]{navio.pdf}\footnotemark
+	\end{figure}
+	
+	\footnotetext{Pesquisa aceita para 2 publicações internacionais da IEEE: \textbf{ICIT 2017} (Canadá) e \textbf{ICMT 2017} (República Tcheca).}
 \end{frame}
 
 \begin{frame}{Arduino}
@@ -152,12 +160,31 @@
 	\footnotetext{https://i1.wp.com/electronicshacking.com/wp-content/uploads/2016/05/}
 \end{frame}
 
+\begin{frame}{Arduino}
+	\begin{figure}[H]
+		\includegraphics[width=.8\textwidth]{uno.jpg}
+	\end{figure}
+\end{frame}
+
 \begin{frame}{ESP8266}
 	\begin{figure}[H]
 		\includegraphics[width=.9\textwidth]{espfamily.png}\footnotemark
 	\end{figure}
 	
 	\footnotetext{https://qph.ec.quoracdn.net/main-qimg-722e4cace72b92ca0efce373866d08c2}
+\end{frame}
+
+\begin{frame}{ESP8266}
+	\begin{itemize}
+		\item É um \textit{System-On-Chip} com Wi-Fi embutido;
+		\item Tem conectores GPIO, barramentos I2C, SPI, UART, entrada ADC, saída PWM e sensor interno de temperatura;
+		\item CPU que opera em 80MHz, com possibilidade de operar em 160MHz;
+		\item Arquitetura RISC de 32 bits;
+		\item 32 KBytes de RAM para instruções;
+		\item 96 KBytes de RAM para dados;
+		\item 64 KBytes de ROM para boot;
+		\item Possui uma memória Flash de 512 KBytes.
+	\end{itemize}	
 \end{frame}
 
 \begin{frame}{Módulo Relé}
@@ -168,18 +195,15 @@
 	\footnotetext{http://thumbs.ebaystatic.com/images/m/mzkfWblEtqpHZfTceI9Bh9A/}
 \end{frame}
 
-%-------------------------------------------------
-%% Software:
-%-------------------------------------------------
 \subsection*{Software}
 \begin{frame}{}
 	\begin{block}{Principais linguagens}
 		\begin{itemize}
-			\item Java;
 			\item C/C++;
-			\item Lua;
 			\item Python;
 			\item JavaScript;
+			\item Lua;
+			\item Java;
 			\item PHP.
 		\end{itemize}
 	\end{block}
@@ -189,6 +213,7 @@
 %% Problemas:
 %-------------------------------------------------
 \section{Problemas}
+\ncframesummary
 
 \subsection*{Endereçamento}
 \begin{frame}{}
@@ -201,11 +226,16 @@
 
 \subsection*{Segurança}
 \begin{frame}{}
-	\begin{block}{\cite{ComputerWorld}}
+	\begin{block}{}
+		\textbf{\cite{ComputerWorld}:}
 		\begin{itemize}
-			\item Com tantas coisas conectadas à web, os institutos de pesquisa apontam aspectos negativos em relação à segurança. Eles indicam que dentro de \textbf{dois anos}, 90\% de todas as redes de TI terão uma falha de segurança derivada da IoT.
-			\item Em 2013, hackers americanos invadiram um carro conectando-se à porta serial do veículo. Esse tipo de conexão é comumente utilizada para análise e manutenção dos veículos.
-			\item Em 2015, eles repetiram o ataque via \textit{wireless}.
+			\item Com tantas coisas conectadas à web, os institutos de pesquisa apontam aspectos negativos em relação à segurança. Eles indicam que dentro de \textbf{dois anos}, 90\% de todas as redes de TI terão uma falha de segurança derivada da IoT;
+			\item Em 2013, \textit{hackers} americanos invadiram um carro conectando-se à porta serial do veículo. Esse tipo de conexão é comumente utilizada para análise e manutenção dos veículos;
+			\item Em 2015, eles repetiram o ataque via \textit{wireless}. 
+		\end{itemize}
+		\textbf{\cite{IDGNOW}:}
+		\begin{itemize}
+			\item \textit{Hackers} começaram a adicionar rotinas de limpeza de dados em \textit{malwares} que são feitos para infectar aparelhos embutidos e de Internet das Coisas.
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -226,11 +256,12 @@
 %% Como começar:
 %-------------------------------------------------
 \section{Por onde começar?}
-\label{sec:comeco}
+\ncframesummary
 
 \subsection*{Pesquise}
 \begin{frame}{}
-	\begin{block}{\textit{Links} para leitura (nas referências)}
+	\begin{block}{Teoria} %(\textit{Links} nas referências)}
+		\textbf{Pré-requisito: Inglês básico}
 		\begin{itemize}
 			\item Windows 10 IoT \cite{WindowsIot};
 			\item Intel IoT \cite{IntelIot};
@@ -242,14 +273,15 @@
 
 \subsection*{Faça Você Mesmo!}
 \begin{frame}{}
-	\begin{block}{\textit{Links} para praticar (nas referências)}
+	\begin{block}{Prática} %(\textit{Links} nas referências)}
 		\textbf{Pré-requisito: Inglês básico}
 		\begin{itemize}
 			\item Dweet.io - A rede social das máquinas \cite{DweetIot};
 			\item ThingSpeak - Análise de dados \cite{ThingSpeakIot};
 			\item Highcharts - Análise de dados e gráficos \cite{HighChartsIot};
 			\item FreeBoard - Controle das coisas \cite{FreeBoardIot};
-			\item Instructables - Ideias pra replicar (Básico) \cite{InstructablesIot}. 
+			\item Fritzing - Sketches/modelagem de componentes \cite{Fritzing};
+			\item Instructables - Ideias pra replicar (Básico) \cite{InstructablesIot};
 			\item Hackaday - Ideias pra replicar (Avançado) \cite{HackadayIot}.
 		\end{itemize}
 	\end{block}
@@ -258,4 +290,31 @@
 	\end{figure}
 	
 	\footnotetext{http://mydogsjournal.com/wp-content/uploads/2013/12/}
+\end{frame}
+
+%-------------------------------------------------
+%% Vídeo:
+%-------------------------------------------------
+\section{Vídeo}
+\ncframesummary
+
+\begin{frame}{A Web Social das Coisas \cite{Ericsson}}	
+	\begin{figure}[!b]
+		\centering
+		\href{run:mov/iot-ericsson.mp4}{\includegraphics[width=0.65\textwidth]{img/video.jpg}}
+	\end{figure}
+\end{frame}
+
+%-------------------------------------------------
+%% Demonstração:
+%-------------------------------------------------
+\section{Demonstração}
+\ncframesummary
+
+\begin{frame}{Hello World!}	
+	\begin{itemize}
+		\item Controlar uma lâmpada pela web usando o ESP8266 nodemcu;
+		\item Controlar leds pela web usando o ESP8266 nodemcu;
+		\item Controlar uma lâmpada pelo App Telegram usando o Raspberry Pi 2 model B e a API Telepot do Telegram.
+	\end{itemize}
 \end{frame}

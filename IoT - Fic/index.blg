@@ -33,45 +33,55 @@ Warning--entry type for "InstructablesIot" isn't style-file defined
 --line 371 of file refs.bib
 Warning--entry type for "HackadayIot" isn't style-file defined
 --line 379 of file refs.bib
-You've used 14 entries,
+Warning--entry type for "Michaelis" isn't style-file defined
+--line 387 of file refs.bib
+Warning--entry type for "Amazon" isn't style-file defined
+--line 395 of file refs.bib
+Warning--entry type for "IDGNOW" isn't style-file defined
+--line 403 of file refs.bib
+Warning--entry type for "Fritzing" isn't style-file defined
+--line 411 of file refs.bib
+Warning--entry type for "Ericsson" isn't style-file defined
+--line 419 of file refs.bib
+You've used 19 entries,
             1935 wiz_defined-function locations,
-            536 strings with 4693 characters,
-and the built_in function-call counts, 3522 in all, are:
-= -- 367
-> -- 104
-< -- 14
-+ -- 32
-- -- 30
-* -- 218
-:= -- 701
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 84
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 144
-empty$ -- 219
-format.name$ -- 46
-if$ -- 648
+            551 strings with 4878 characters,
+and the built_in function-call counts, 4751 in all, are:
+= -- 497
+> -- 139
+< -- 19
++ -- 44
+- -- 40
+* -- 293
+:= -- 946
+add.period$ -- 57
+call.type$ -- 19
+change.case$ -- 114
+chr.to.int$ -- 19
+cite$ -- 19
+duplicate$ -- 194
+empty$ -- 294
+format.name$ -- 61
+if$ -- 873
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 2
-newline$ -- 73
-num.names$ -- 42
-pop$ -- 48
+newline$ -- 98
+num.names$ -- 57
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 115
 quote$ -- 0
-skip$ -- 128
+skip$ -- 173
 stack$ -- 0
-substring$ -- 170
+substring$ -- 232
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 112
 warning$ -- 0
-while$ -- 28
+while$ -- 38
 width$ -- 0
-write$ -- 170
-(There were 13 warnings)
+write$ -- 230
+(There were 18 warnings)

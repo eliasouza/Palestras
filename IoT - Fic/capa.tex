@@ -24,12 +24,16 @@
 \def\myinstitute{Faculdades Integradas de Caratinga - FIC} 
 
 % Programa da apresentação
-\def\myprogram{Curso de Graduação em Ciência da Computação} 
+\def\myprogram{Ciclo de Palestras - Ciência da Computação} 
 
 % Gerar a capa com as informações fornecidas acima
 \title[\mysubject]{\textbf{\mysubject:} \\[1ex] \mytitle \\[1ex]}
 \author[\myauthor]{\\[1ex] \myauthor \\[3ex]}
 \institute[M.Sc.]{\myinstitute \\[1ex] \myprogram \\[1ex]}
+
+% ----- Logo nas páginas --------% 
+\pgfdeclareimage[width=0.7cm]{logo}{img/doctum.png}
+\logo{\pgfuseimage{logo}}
 
 % Data da apresentação - 'date' deixa a data automática, porém o arquivo precisa ser compilado no dia da apresentação.
 \date{\\4 de Maio de 2017} 

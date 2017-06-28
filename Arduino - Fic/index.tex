@@ -1,0 +1,84 @@
+%-------------------------------------------------
+%% Classe utilizada:
+%-------------------------------------------------
+
+\documentclass{beamer}
+
+%-------------------------------------------------
+%% Pacotes (imports) utilizados:
+%-------------------------------------------------
+
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{colortbl}
+\usepackage{verbatim} % Para comentar múltiplas linhas
+\usepackage{ragged2e}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{epstopdf}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage{array}% http://ctan.org/pkg/array
+\usepackage{listings}%Codes on latex
+\usepackage[3D]{movie15} % Para reproduzir vídeo
+\usepackage{subfig}%[caption=false,font=normalsize,labelfont=sf,textfont=sf] % Subfigure package
+\usepackage[portuguese,ruled,lined,linesnumbered]{algorithm2e} % Pseudocódigo
+\SetKwComment{Comment}{//}{} % Permite comentários no pseudocódigo
+\DontPrintSemicolon % Remove ';' do pseudocódigo
+\SetCommentSty{itshape} % Formato do comentário
+
+%-------------------------------------------------
+%% Para escrever trechos de códigos
+%-------------------------------------------------
+
+% Definindo novas cores para os blocos de códigos:
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+\usepackage{listings} % Source code linked
+\lstset{
+	language=C++,
+	basicstyle=\ttfamily\small, 
+	keywordstyle=\color{jpurple}\bfseries,
+	stringstyle=\color{red},
+	commentstyle=\color{verde},
+	morecomment=[s][\color{blue}]{/**}{*/},
+	extendedchars=true, 
+	showspaces=false, 
+	showstringspaces=false, 
+	%numbers=left,
+	%numberstyle=\tiny,
+	breaklines=true, 
+	backgroundcolor=\color{cyan!10}, 
+	breakautoindent=true, 
+	captionpos=b,
+	xleftmargin=0pt,
+	tabsize=4
+}
+
+%-------------------------------------------------
+%% Configurações (Modificar conforme o uso):
+%-------------------------------------------------
+
+\include{capa} % Capa da apresentação
+\input{configuracoes} % Outras configurações
+\linespread{1}
+
+%-------------------------------------------------
+%% Desenvolvimento da Apresentação:
+%-------------------------------------------------
+
+\begin{document}
+	% Elementos pré textuais
+	\frame{\titlepage}
+	\frame{\frametitle{Sumário} \tableofcontents}
+	
+	% Conteúdo
+	\include{introducao}
+	\include{desenvolvimento}
+	%\include{recapitulacao}
+	
+	% Elementos pós textuais
+	\include{referencias}
+	\include{agradecimento}
+\end{document}

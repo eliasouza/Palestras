@@ -1,0 +1,325 @@
+\section{Fundamentação Teórica}
+\label{sec:fundamentacao-teorica}
+
+\begin{frame}{Fundamentação Teórica}
+	\begin{itemize}
+		%\item Classificação dos VANTs;
+		%\item Sistema de Referência;
+		\item Sistema de Navegação Inercial;
+		\item Sistema Global de Posicionamento;
+		\item Cointegração;
+		\item Filtro de Kalman Estendido.
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------
+%% Classificação dos VANTs:
+%-------------------------------------------------
+
+%\subsection*{Classificação dos VANTs}
+%\begin{frame}{Por sustentação}		
+%	\begin{figure}[H]
+%		\subfloat[Asa fixa.]{\includegraphics[width=.5\textwidth]{fixa.jpg}} 
+%		\subfloat[Dirigível.]{\includegraphics[width=.3\textwidth]{dirigivel.png}}
+%		\hfill
+%		\subfloat[Asa rotativa.]{\includegraphics[width=.33\textwidth]{f450.jpg}}
+%		\subfloat[Flaping.]{\includegraphics[width=.33\textwidth]{flaping.jpg}}
+%	\end{figure}
+%\end{frame}
+%
+%\begin{frame}{Por dimensões~\cite{bento2008unmanned}}
+%	% Redefine o tamanho da nota de rodapé para aplicar à tabela
+%	\renewcommand{\footnotesize}{\scriptsize}	
+%	\begin{footnotesize}
+%		\begin{table}[H]
+%			\begin{tabular}{|l|l|l|l|l|}
+%				\lp \textbf{Categoria} & \textbf{Peso (Kg)} & \textbf{Altitude (m)} & \textbf{Autonomia (H)} & \textbf{Enlace (Km)} \\ 
+%				\li Micro         & 0.10      & 250          & 1             & $<$ 10      \\ 
+%				\lp Mini          & $<$ 30    & 150-300      & $<$ 2         & $<$ 10      \\ 
+%				\li Close Range   & 150       & 3000         & 2-4           & 10-30       \\ 
+%				\lp Short Range   & 200       & 3000         & 3-6           & 30-70       \\ 
+%				\li Medium Range  & 150-500   & 3000-5000    & 6-10          & 70-200      \\ 
+%				\lp Long Range    & -         & 5000         & 6-13          & 200-500     \\ 
+%				\li Endurance     & 500-1500  & 5000-8000    & 12-24         & $>$ 500     \\ 
+%				\hline
+%			\end{tabular} 
+%		\end{table}
+%	\end{footnotesize}
+%\end{frame}
+
+%-------------------------------------------------
+%% Sistema de Referência:
+%-------------------------------------------------
+
+%\subsection*{Sistema de Referência}
+%\begin{frame}{Mais usados em navegação \cite{rodrigues2015fusao}}
+%	\begin{block}{}
+%		Propriedades do objeto, como a posição e a orientação, são medidas e analisadas.
+%	\end{block}
+%		
+%	\begin{figure}[H]
+%		\includegraphics[width=.6\textwidth]{sistemas_referencia.eps} 
+%	\end{figure}
+%\end{frame}
+%
+%-------------------------------------------------
+%% Sistema Navegação Inercial (INS):
+%-------------------------------------------------
+
+\subsection*{Sistema de Navegação Inercial (INS)}
+\begin{frame}{}
+%	\begin{block}{Sensores inerciais}
+%		\begin{itemize}
+%			\item Acelerômetros;
+%			\item Girômetros.
+%		\end{itemize}
+%%		Processo pelo qual se adquire conhecimento sobre a posição, velocidade e atitude de um veículo com relação a um dado referencial, através de informações fornecidas por sensores inerciais \cite{adalberto2009inercial}.
+%	\end{block}
+	
+%	\begin{figure}[H]
+%		\setcounter{subfigure}{0}
+%		\subfloat[Plataforma básica \cite{paixao2011attitude}.]{\includegraphics[width=.4\textwidth]{imu_basic.png}} 
+%		\hfill
+%		\subfloat[Plataforma adotada \cite{navio2015pilot}.]{\includegraphics[width=.45\textwidth]{autopilot_board.eps}}
+%	\end{figure}
+	\begin{figure}[H]
+		\includegraphics[width=.8\textwidth]{presentation/imu.jpg}\footnotemark
+	\end{figure}
+	
+	\footnotetext{http://slideplayer.com/slide/5125961/}
+\end{frame}
+
+%\begin{frame}{Acelerômetro}
+%	\begin{columns}
+%		\column{0.47\linewidth}
+%		\begin{block}{}
+%			Mede forças específicas com base na segunda lei de Newton.
+%			
+%			\centering
+%			$a_m = a_1+g$
+%			
+%			\begin{itemize}
+%				\item $a_m$: aceleração média;
+%				\item $a_1$: aceleração linear, 0 quando em repouso;
+%				\item $g$: aceleração da gravidade.
+%			\end{itemize}
+%		\end{block}
+%		
+%		\column{0.48\linewidth}
+%		\begin{block}{}
+%			Para obter a aceleração da aeronave basta remover os efeitos da gravidade, transformando a gravidade do referencial inercial para o referencial da aeronave.
+%			
+%			\centering
+%			$a_1 = a_m-R^b_i\begin{bmatrix}{0}\\{0}\\{g}\end{bmatrix}$			
+%		\end{block}
+%	\end{columns}
+%\end{frame}
+%
+%\begin{frame}{Girômetro}
+%	\begin{block}{}
+%		São dispositivos que medem a orientação contra um ponto de referência física sendo necessário integrar a velocidade angular ao utilizá-los para então obter a orientação.
+%	\end{block}
+%	
+%	\begin{block}{}		
+%		\centering
+%		$\theta(t)=\displaystyle\int_{0}^{t}{\dot \theta_b(t)dt+\theta_0}$
+%		
+%		\begin{itemize}
+%			\item $\dot \theta_b$: velocidade angular no corpo da aeronave.
+%			\item $\theta_0$: orientação inicial da aeronave;
+%		\end{itemize}			
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}{Magnetômetro}
+%	\begin{block}{}
+%		\centering
+%		$\psi_m=-atan2(Y_h,X_h)$
+%		
+%		\begin{itemize}
+%			\item $X_h$: medição no eixo $x$;
+%			\item $Y_h$: medição no eixo $y$.
+%		\end{itemize}
+%	\end{block}
+%	
+%	\begin{figure}[H]
+%		\setcounter{subfigure}{0}
+%		\subfloat[Ângulo de guinada no plano horizontal.]{\includegraphics[width=.5\textwidth]{mag_guinada.eps}} 
+%		\hfill
+%		\subfloat[Movimentos de alinhamento com o plano horizontal.]{\includegraphics[width=.5\textwidth]{mag_movimentos.eps}}
+%	\end{figure}
+%\end{frame}
+
+%-------------------------------------------------
+%% Sistema Global de Posicionamento (GPS):
+%-------------------------------------------------
+
+\subsection*{Sistema Global de Posicionamento (GPS)}
+\begin{frame}{Funcionamento do GPS \cite{kaplan2005understanding}}
+%	\begin{columns}
+%		\column{0.47\linewidth}
+%		\begin{block}{}
+%			\begin{itemize}
+%				\item O tempo gasto pelo sinal até o receptor determina a distância do satélite até o ponto;
+%				\item O sinal informa o momento em que foi enviado e a posição do satélite;
+%				\item Latitude, longitude e altitude do receptor são determinadas por triangulação.
+%			\end{itemize}
+%		\end{block}
+%	
+%		% No melhor caso a posição é determinada com 3 satélites, sem erros;
+%		% É necessário um satélite adicional para compensar o tempo do relógio do receptor de satélite;
+%		\column{0.48\linewidth} 
+%	\end{columns}
+	\begin{figure}[H]
+		\includegraphics[width=.65\textwidth]{satelites_gps2.eps} 
+	\end{figure}
+\end{frame}
+
+%-------------------------------------------------
+%% Cointegração:
+%-------------------------------------------------
+
+\subsection*{Cointegração}
+%\begin{frame}{}
+%	\begin{block}{}
+%		Permite determinar se as \textbf{séries temporais} envolvidas possuem relação. 
+%		Normalmente as séries apresentam tendências. São denominadas séries não \textbf{estacionárias} possuindo \textbf{raíz unitária}.
+%	\end{block}
+%	
+%	\begin{columns}
+%		\column{0.48\linewidth}
+%		\begin{block}{Série Temporal}
+%			\begin{itemize}
+%				\item Conjunto de observações ordenadas no tempo.
+%			\end{itemize}
+%		\end{block}
+%		
+%		\column{0.48\linewidth}
+%		\begin{block}{Estacionariedade}
+%			\begin{itemize}
+%				\item O processo possui propriedade estatística invariante.
+%				%Média, variância e autocovariância constantes.
+%			\end{itemize}
+%		\end{block}
+%	\end{columns}
+%\end{frame}
+
+%\begin{frame}{Raíz Unitária}
+%	\begin{block}{}
+%		A raíz da equação característica do processo estocástico linear é 1;
+%		\begin{itemize}
+%			\item $H_0$: Tem raíz unitária (não é estacionária);
+%			\item $H_1$: Não tem raíz unitária (é estacionária).
+%		\end{itemize}
+%	\end{block}
+%	
+%%	\begin{columns}
+%%		\column{0.49\linewidth}
+%%		\begin{block}{Diferenciação}
+%%			\begin{itemize}
+%%				\item Trabalha com os valores das séries:
+%%			\end{itemize}			
+%%			\centering
+%%			$\Delta Z(t) = Z(t) - Z(t-1)$
+%%			
+%%			$\Delta^n Z(t) = \Delta[\Delta^{n-1}Z(t)]$
+%%		\end{block}
+%%		
+%%		\column{0.47\linewidth}
+%%		\begin{block}{Cointegração}
+%%			\begin{itemize}
+%%				\item Trabalha com o nível das séries: $Z(t) \sim CI(d,b)$ se:
+%%			\end{itemize}
+%%			$Z(t)$ é $I(d)$;\\
+%%			$\alpha 'Z(t) \sim I(d-b), d-b\geqslant 0$ e $b>0$.
+%%		\end{block}
+%%	\end{columns}
+%\end{frame}
+
+\begin{frame}{ADF \cite{dickey1979distribution} e Johansen \cite{johansen1988statistical}}
+	\begin{block}{}
+		Cointegração permite determinar se as séries temporais envolvidas possuem relação. 
+		Normalmente as séries apresentam tendências. São denominadas séries não estacionárias possuindo raíz unitária.
+	\end{block}
+	
+	\textcolor{white}{line}
+	
+	\centering
+	$\Delta y_{t} = \beta_{1} + \beta_{2}t + \delta y_{t-1} + \sum_{i=1}^{m} \alpha_{i} \Delta y_{t-i} + v_t $\\
+%	\begin{itemize}
+%		\item $\beta_{1}$: intercepto da série;
+%		\item $\beta_{2}$: coeficiente de tendência;
+%		\item $\delta$: coeficiente de raíz unitária;
+%		\item $m$: ordem de atraso do processo autorregressivo;
+%		\item $\alpha_i$: parâmetro do modelo;
+%		\item $v_t$: ruído branco. 
+%	\end{itemize}
+	
+	\textcolor{white}{line}
+	
+	\centering
+	$J_{trace} = -T \sum_{i=r+1}^{n} ln(1-\hat{\lambda}_{i})$
+%	\begin{itemize}
+%		\item $T$: número de observações;
+%		\item $ln$: logaritmo dos autovalores estimados;
+%		\item $\hat{\lambda}$: correlação canônica;
+%		\item $r$: número de vetores de cointegração;
+%		\item $n$: número de hipóteses alternativas de vetores de cointegração.
+%	\end{itemize}
+\end{frame}
+
+%\begin{frame}{Ocorrências}
+%		\begin{block}{}
+%			%A combinação linear das séries temporais não estacionárias é estacionária:
+%			\begin{itemize}
+%				\item As variáveis apresentarem tendência estocástica comum;
+%				\item A relação entre duas variáveis integradas pode ser expressa como uma combinação linear estacionária.
+%			\end{itemize}
+%		\end{block}
+%\end{frame}
+
+%-------------------------------------------------
+%% Filtro de Kalman:
+%-------------------------------------------------
+
+\subsection*{Filtro de Kalman Estendido}
+\begin{frame}{}
+	\begin{block}{Modelo do Sistema}
+		%Utilizado para predição de variáveis de estado em sistemas que apresentam ruídos e/ou incertezas.
+		\begin{itemize}
+			\item $x_k = f(x_{k-1}, u_{k-1}) + w_{k-1}$\\ %Modelo do sistema: ao invés de uma matriz de transição de estado (modelo linear) tem-se um função não linear.
+			\item $z_k = h(x_{k}) + v_{k}$ %Modelo das observações
+		\end{itemize}
+%		\centering
+%		$x_k = f(x_{k-1}, u_{k-1}) + w_{k-1}$\\ %Modelo do sistema: ao invés de uma matriz de transição de estado (modleo linear) tem-se um função não linear.
+%		
+%		\centering
+%		$z_k = h(x_{k}) + v_{k}$ %Modelo das observações
+	\end{block}
+	
+	\begin{columns}
+		\column{0.55\linewidth}
+		\begin{block}{Predição}
+			\begin{itemize}
+				\item $\hat{x}_{k|k-1} = f(\hat{x}_{k-1}, u_{k-1})$ % Vetor de variáveis de estado estimadas
+				\item $P_{k|k-1} = F'_{k-1}P_{k-1|k-1}F'^{T}_{k-1}+G'_{k-1}Q_{k-1}G'^{T}_{k-1}$ % Matriz de covariância do erro
+			\end{itemize}			
+		\end{block}
+		
+		\column{0.39\linewidth}
+		\begin{block}{Atualização}
+			\begin{itemize}
+				\item $\hat{y}_k = z_k - h(\hat{x}_{k|k-1})$ % Resíduo da observação
+				\item $S_k = H'_kP_{k|k-1}H'^{T}_k+R_k$ % Resíduo da covariância
+				\item $K_k = P_{k|k-1}H'^T_kS^{-1}_k$ % Ganho ótimo de Kalman
+			\end{itemize}
+		\end{block}
+	\end{columns}
+	
+	\begin{block}{Estimativas a \textit{posteriori}}
+		\begin{itemize}
+			\item $\hat{x}_{k|k} = \hat{x}_{k|k-1}+K_k\hat{y}_k$ % Das variáveis de estado
+			\item $P_{k|k} = (I - K_kH'_k)P_{k|k-1}$ % Da covariância do erro
+		\end{itemize}			
+	\end{block}
+\end{frame}
